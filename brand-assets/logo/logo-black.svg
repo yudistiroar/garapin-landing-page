@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 240" role="img" aria-labelledby="logo-black-title">
-  <title id="logo-black-title">Garapin Digital logo</title>
-  <g fill="#111">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 240" role="img" aria-label="Garapin Digital horizontal logo">
+  <g fill="#111111">
     <g transform="translate(35 25)">
       <path d="M78 14C61-2 31-3 12 16-5 34-5 66 12 84c19 19 49 18 67 0L69 73c-14 14-34 14-46 1-12-13-12-35 0-48 12-13 32-13 45 1ZM50 47h42v35H79V60H50Z"/>
       <path transform="translate(173.455 -4.545) scale(1.13636)" d="M50 4 96 92H74.5L50 45.13 25.5 92H4L50 4Zm0 66.96L61 92H39l11-21.04Z"/>

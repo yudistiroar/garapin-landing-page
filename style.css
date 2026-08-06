@@ -86,7 +86,7 @@ ol {
   --color-selection-text: #ffffff;
 
   --font-family:
-    Inter,
+    "Geist",
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -369,7 +369,6 @@ section {
 .hero {
   padding: clamp(2.5rem, 5vw, 5rem) 0 var(--space-7);
   background: var(--color-white);
-  font-family: "Geist", var(--font-family);
 }
 
 .hero .container {
