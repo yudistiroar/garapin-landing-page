@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 240" role="img" aria-labelledby="logo-white-title">
+  <title id="logo-white-title">Garapin Digital logo</title>
+  <g fill="#fff">
+    <g transform="translate(35 25)">
+      <path d="M78 14C61-2 31-3 12 16-5 34-5 66 12 84c19 19 49 18 67 0L69 73c-14 14-34 14-46 1-12-13-12-35 0-48 12-13 32-13 45 1ZM50 47h42v35H79V60H50Z"/>
+      <path transform="translate(173.455 -4.545) scale(1.13636)" d="M50 4 96 92H74.5L50 45.13 25.5 92H4L50 4Zm0 66.96L61 92H39l11-21.04Z"/>
+      <path d="M360 0h13v100h-13Zm13 0h34c26 0 41 12 41 31s-15 31-41 31h-34V49h33c17 0 27-6 27-18s-10-18-27-18h-33Zm30 55h14l23.52 45h-14Z"/>
+      <path transform="translate(521.455 -4.545) scale(1.13636)" d="M50 4 96 92H74.5L50 45.13 25.5 92H4L50 4Zm0 66.96L61 92H39l11-21.04Z"/>
+      <path d="M708 0h13v100h-13Zm13 0h34c26 0 41 12 41 31s-15 31-41 31h-34V49h33c17 0 27-6 27-18s-10-18-27-18h-33ZM874 0h13v100h-13ZM965 0h13v100h-13Zm73 0h13v100h-13Zm-64 0h13l52.27 100h-13Z"/>
+    </g>
+    <g transform="translate(320.5 180)">
+      <path d="M0 0h12c11 0 18 6 18 16.5S23 33 12 33H0Zm4 4v25h8c8.5 0 14-4.2 14-12.5S20.5 4 12 4ZM85 0h4v33h-4ZM166 7.3a13.2 13.2 0 1 0 0 18.4l-3.3-3.3a8.8 8.8 0 1 1 0-11.8Zm-7.5 8.3h13.5v10.1h-4.2v-5.9h-9.3ZM225 0h4v33h-4ZM280 0h30v4h-13v29h-4V4h-13ZM382.25 0l17.25 33h-4.8l-12.45-23.5L369.8 33H365Zm-8.25 22.5h16.5v4H374ZM451 0h4v29h24v4h-28Z"/>
+    </g>
+  </g>
+</svg>
