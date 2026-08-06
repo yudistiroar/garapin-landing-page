@@ -839,13 +839,12 @@ section {
   }
 }
 
-.portfolio-video-player {
+.portfolio-video-embed {
   display: block;
   width: 100%;
-  max-width: 420px;
   aspect-ratio: 9 / 16;
   margin-inline: auto;
+  border: 0;
   border-radius: var(--radius-lg);
   background: #000;
-  object-fit: cover;
 }
