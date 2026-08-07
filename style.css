@@ -1604,12 +1604,16 @@ body.modal-open {
   }
 
   .cta-content {
-    gap: var(--space-4);
+    gap: var(--space-3);
     padding: var(--space-6);
   }
 
   .cta-subtitle {
-    margin-top: var(--space-2);
+    margin-top: var(--space-1);
+  }
+
+  .cta-actions {
+    gap: var(--space-1);
   }
 }
 
