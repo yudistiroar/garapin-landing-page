@@ -362,6 +362,34 @@ section {
   font-weight: var(--font-weight-semibold);
 }
 
+.header-cta-label-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .site-header .container {
+    padding-left: var(--space-1);
+  }
+
+  .logo-link {
+    width: 8.75rem;
+  }
+
+  .header-cta a {
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    line-height: 1.2;
+  }
+
+  .header-cta-label-desktop {
+    display: none;
+  }
+
+  .header-cta-label-mobile {
+    display: inline;
+  }
+}
+
 /* ========================================
    HERO
 ======================================== */

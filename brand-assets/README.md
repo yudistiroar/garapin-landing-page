@@ -1,46 +1,53 @@
-# Garapin Brand Assets v2
+# Garapin Brand Identity v2
 
-These files are the official production assets for the Garapin website and digital channels. Use the supplied files directly. Do not recreate the logo with live text, alter its proportions, or combine the standalone mark with the primary logo.
+This directory is the single source of truth for Garapin’s official production assets. Every file is derived from the supplied Brand Identity v2 vector artwork. Do not redraw, typeset, distort, outline, add effects to, or alter the proportions of the logo or logomark.
 
-## Logo variants
+## Official logo and wordmark usage
 
-- `logo/logo-black.svg`: Primary logo for white and light backgrounds.
-- `logo/logo-white.svg`: Reversed logo for black and dark backgrounds.
-- PNG variants are provided for software that cannot use SVG.
+- Use `logo/logo-black.svg` as the primary Garapin Digital wordmark on white and light backgrounds.
+- Use `logo/logo-white.svg` on black and dark backgrounds.
+- Prefer SVG for websites, interfaces, and other vector-capable applications so the artwork remains sharp at every size.
+- Use the transparent PNG equivalents only where SVG is unsupported. The PNG exports are 2048 px wide for high-density and Retina displays.
+- Keep the complete `GARAPIN` and `DIGITAL` lockup intact. Do not remove, move, resize, or recreate either line independently.
 
-The primary logo contains only `GARAPIN` and `DIGITAL`. Do not add the standalone mark beside or above it.
+## Logomark usage
 
-## Standalone mark
-
-- `mark/mark-black.svg`: Mark for light backgrounds.
-- `mark/mark-white.svg`: Mark for dark backgrounds.
-
-Use the standalone mark for avatars, favicons, app icons, watermarks, and other compact applications. Do not substitute it for the primary logo when the full identity can be displayed legibly.
-
-## Clear space
-
-Use the inner clarity triangle as the reference unit `x`. Maintain at least `2x` around the wordmark. For the standalone mark, maintain clear space equal to at least half the mark's width. No text, border, image edge, or unrelated graphic should enter this area.
+- Use `mark/mark-black.svg` on white and light backgrounds.
+- Use `mark/mark-white.svg` on black and dark backgrounds.
+- The logomark is the custom “A” from the official wordmark. Use it only for compact applications such as avatars, favicons, app icons, and watermarks.
+- Do not substitute the mark for the full wordmark when the full identity can be displayed legibly.
 
 ## Minimum size
 
-- Primary SVG logo: minimum recommended width `120px` on screen or `32mm` in print.
-- Primary PNG logo: avoid displaying above its exported pixel dimensions.
-- Standalone mark: minimum recommended size `24px` on screen.
-- At sizes below `24px`, use the dedicated favicon exports.
+- Full logo: minimum recommended width of 120 px on screen or 32 mm in print.
+- Standalone mark: minimum recommended size of 24 px on screen.
+- Below 24 px, use the dedicated files in `favicon/`; they include optical padding for small-size clarity.
+
+## Clear space
+
+Maintain clear space around the full logo equal to at least the height of the `DIGITAL` line. Around the standalone mark, maintain clear space equal to at least one quarter of the mark’s width. Keep text, borders, imagery, and other graphic elements outside this area.
+
+## Black and white versions
+
+- Official black: `#000000`.
+- Official white: `#FFFFFF`.
+- Use the black artwork on light backgrounds and the white artwork on dark backgrounds.
+- Do not recolor the artwork, apply opacity, add shadows or gradients, or place it over backgrounds that reduce contrast.
+
+## Social avatar usage
+
+Files in `social/` provide platform-ready profile images using the official white mark centered on black. Upload the platform-specific file without renaming or modifying it. The generous safe area supports circular and rounded-square crops.
+
+`social/linkedin-banner.png` uses the full white wordmark on black at 1584 × 396 px. Do not crop, stretch, or add text to it.
 
 ## Favicon usage
 
-Use the files in `favicon/` without resizing them in the browser. The favicon artwork uses the standalone mark with dedicated spacing for reliable contrast at small sizes. `site.webmanifest` contains the Android icon declarations and application colors.
+- `favicon.ico` contains the standard 16, 32, and 48 px browser sizes.
+- Use the dedicated `favicon-16.png`, `favicon-32.png`, and `favicon-48.png` files at their native sizes.
+- `apple-touch-icon.png` is the 180 px Apple touch icon.
+- `android-chrome-192.png` and `android-chrome-512.png` are declared in `site.webmanifest`.
+- Do not resize the browser icons in HTML or replace their built-in clear space.
 
-## Social profile usage
+## Open Graph usage
 
-The files in `social/` use the approved avatar treatment: a centered white mark on brand black. Platform-specific filenames contain identical master artwork so each account can upload the correct dedicated file without renaming.
-
-Keep the mark centered and allow each platform to apply its own circular crop. Do not add account names, slogans, or platform icons to the avatar.
-
-## Color and background
-
-- Brand black: `#111111`
-- Brand white: `#FFFFFF`
-
-Use the black logo on light backgrounds and the white logo on dark backgrounds. Avoid low-contrast photography, effects, outlines, shadows, gradients, distortion, or recoloring.
+Use `open-graph/og-image-1200x630.png` for Open Graph and social link previews. It contains the official white wordmark centered on black at the required 1200 × 630 px aspect ratio.
