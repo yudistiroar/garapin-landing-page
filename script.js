@@ -1,33 +1,5 @@
 "use strict";
 
-const createYouTubePlayer = (videoId, videoTitle, autoplay = false) => {
-  const iframe = document.createElement("iframe");
-  const params = new URLSearchParams({
-    rel: "0",
-    playsinline: "1",
-  });
-
-  if (autoplay) {
-    params.set("autoplay", "1");
-  }
-
-  if (window.location.protocol === "http:" || window.location.protocol === "https:") {
-    params.set("origin", window.location.origin);
-  }
-
-  iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?${params}`;
-  iframe.title = videoTitle;
-  iframe.referrerPolicy = "strict-origin-when-cross-origin";
-  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-  iframe.allowFullscreen = true;
-
-  return iframe;
-};
-
-const openYouTubeShort = (videoId) => {
-  window.open(`https://www.youtube.com/shorts/${encodeURIComponent(videoId)}`, "_blank", "noopener,noreferrer");
-};
-
 (() => {
   const portfolioGrid = document.querySelector("#portfolio-grid");
   const portfolioToggle = document.querySelector(".portfolio-toggle");
@@ -43,33 +15,6 @@ const openYouTubeShort = (videoId) => {
     portfolioToggle.setAttribute("aria-expanded", String(!isExpanded));
     portfolioToggle.textContent = isExpanded ? "Lihat Semua Hasil" : "Tampilkan Lebih Sedikit";
   });
-})();
-
-(() => {
-  const heroVideo = document.querySelector(".hero-video");
-  const heroVideoTrigger = heroVideo?.querySelector(".hero-video-trigger");
-
-  if (!heroVideo || !heroVideoTrigger) {
-    return;
-  }
-
-  heroVideoTrigger.addEventListener("click", () => {
-    const { videoId, videoTitle } = heroVideo.dataset;
-
-    if (!videoId || !videoTitle) {
-      return;
-    }
-
-    if (window.location.protocol === "file:") {
-      openYouTubeShort(videoId);
-      return;
-    }
-
-    const iframe = createYouTubePlayer(videoId, videoTitle, true);
-    iframe.className = "hero-video-frame";
-
-    heroVideo.replaceChildren(iframe);
-  }, { once: true });
 })();
 
 (() => {
@@ -102,12 +47,12 @@ const openYouTubeShort = (videoId) => {
       lastTrigger = card;
       modalTitle.textContent = videoTitle;
 
-      if (window.location.protocol === "file:") {
-        openYouTubeShort(videoId);
-        return;
-      }
-
-      const iframe = createYouTubePlayer(videoId, videoTitle, true);
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}`;
+      iframe.title = videoTitle;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
 
       modalFrame.replaceChildren(iframe);
       document.body.classList.add("modal-open");
