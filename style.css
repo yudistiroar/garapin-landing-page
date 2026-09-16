@@ -628,11 +628,59 @@ section {
 }
 
 .hero-video {
+  position: relative;
   width: 100%;
   aspect-ratio: 9 / 16;
+  overflow: hidden;
   border: 0;
   border-radius: inherit;
   background: var(--color-black);
+}
+
+.hero-video-trigger,
+.hero-video-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+}
+
+.hero-video-trigger {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-frame {
+  background: var(--color-black);
+}
+
+.hero-video-poster {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.hero-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-black);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.hero-video-play svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
 }
 
 .hero-quote {
@@ -900,6 +948,32 @@ section {
   width: 1.5rem;
   height: 1.5rem;
   fill: currentColor;
+}
+
+.shorts-play {
+  width: 4.5rem;
+  height: 5.5rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: initial;
+  box-shadow: none;
+}
+
+.hero-video-play.shorts-play svg,
+.portfolio-play.shorts-play svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 7px 14px rgba(0, 0, 0, 0.28));
+}
+
+.shorts-shape {
+  fill: #ff0033;
+}
+
+.shorts-triangle {
+  fill: #fff;
 }
 
 .portfolio-card-copy,
@@ -1757,7 +1831,7 @@ body.modal-open {
   outline-offset: 3px;
 }
 
-.hero-video:focus-visible,
+.hero-video-trigger:focus-visible,
 .portfolio-modal :focus-visible,
 .cta :focus-visible {
   outline-color: var(--color-white);
