@@ -18,65 +18,6 @@
 })();
 
 (() => {
-  const modal = document.querySelector("#portfolio-modal");
-  const modalFrame = modal?.querySelector(".portfolio-modal-frame");
-  const modalTitle = modal?.querySelector("#portfolio-modal-title");
-  const closeButton = modal?.querySelector(".portfolio-modal-close");
-  const portfolioCards = document.querySelectorAll(".portfolio-card");
-
-  if (!modal || !modalFrame || !modalTitle || !closeButton) {
-    return;
-  }
-
-  let lastTrigger = null;
-
-  const closeModal = () => {
-    if (modal.open) {
-      modal.close();
-    }
-  };
-
-  portfolioCards.forEach((card) => {
-    card.addEventListener("click", () => {
-      const { videoId, videoTitle } = card.dataset;
-
-      if (!videoId || !videoTitle) {
-        return;
-      }
-
-      lastTrigger = card;
-      modalTitle.textContent = videoTitle;
-
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}`;
-      iframe.title = videoTitle;
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
-      iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.allowFullscreen = true;
-
-      modalFrame.replaceChildren(iframe);
-      document.body.classList.add("modal-open");
-      modal.showModal();
-    });
-  });
-
-  closeButton.addEventListener("click", closeModal);
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  modal.addEventListener("close", () => {
-    modalFrame.replaceChildren();
-    document.body.classList.remove("modal-open");
-    lastTrigger?.focus();
-    lastTrigger = null;
-  });
-})();
-
-(() => {
   const faqItems = document.querySelectorAll(".faq-item");
 
   if (!faqItems.length) {
