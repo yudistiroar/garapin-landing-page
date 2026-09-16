@@ -1246,6 +1246,34 @@ body.modal-open {
   margin-top: auto;
 }
 
+.pricing-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+}
+
+.pricing-custom h3 {
+  font-size: var(--font-size-lg);
+}
+
+.pricing-custom p {
+  max-width: 48rem;
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.pricing-custom .button {
+  flex: 0 0 auto;
+}
+
 .pricing-note {
   margin-top: var(--space-6);
   color: var(--color-text-muted);
@@ -1291,6 +1319,18 @@ body.modal-open {
 
   .pricing-note {
     margin-top: var(--space-4);
+  }
+
+  .pricing-custom {
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .pricing-custom .button {
+    width: 100%;
   }
 }
 
